@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="dropdown is-right is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button is-white" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span><i class="fa fa-user" aria-hidden="true"></i> yxh001</span>
+                                <span class="icon is-small">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item">
+                                    Sign Out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="columns is-gapless">
+        <div class="column is-one-quarter"style="background-color: white;">
+            <!-- <div class="card"  >
+                <div class="card-content">
+                    Filter
+                </div>
+            </div> -->
+
+            <article class="panel is-primary" id="panel-container">
+                <p class="panel-heading">
+                    Filters
+                </p>
+                
+                <div class="one-tag-group">
+                    <div class="tag-title">
+                        Country
+                    </div>
+                    <hr>
+                    <div class="tag-container">
+                        <button class="button is-rounded is-small">Rounded</button>
+                        <button class="button is-rounded is-small">Russia</button>
+                        <button class="button is-rounded is-small">UK</button>
+                        <button class="button is-rounded is-small">US</button>
+                        <button class="button is-rounded is-small">China</button>
+                        <button class="button is-rounded is-small">Sweden</button>
+                        <button class="button is-rounded is-small">France</button>
+                    </div>
+                </div>
+
+                <div class="one-tag-group">
+                    <div class="tag-title">Language <button class="button is-rounded is-small is-link">Rounded &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button></div>
+
+                    <hr>
+                    <div class="tag-container">
+                        <button class="button is-rounded is-small">Rounded</button>
+                        <button class="button is-rounded is-small">Russia</button>
+                        <button class="button is-rounded is-small">UK</button>
+                        <button class="button is-rounded is-small">US</button>
+                        <button class="button is-rounded is-small">China</button>
+                        <button class="button is-rounded is-small">Sweden</button>
+                        <button class="button is-rounded is-small">France</button>
+                        <button class="button is-rounded is-small">Rounded</button>
+                        <button class="button is-rounded is-small">Russia</button>
+                        <button class="button is-rounded is-small">UK</button>
+                        <button class="button is-rounded is-small">US</button>
+                        <button class="button is-rounded is-small">China</button>
+                        <button class="button is-rounded is-small">Sweden</button>
+                        <button class="button is-rounded is-small">France</button>
+                        <button class="button is-rounded is-small">Rounded</button>
+                        <button class="button is-rounded is-small">Russia</button>
+                        <button class="button is-rounded is-small">UK</button>
+                        <button class="button is-rounded is-small">US</button>
+                        <button class="button is-rounded is-small">China</button>
+                        <button class="button is-rounded is-small">Sweden</button>
+                        <button class="button is-rounded is-small">France</button>
+                    </div>
+                </div>
+
+                <div class="one-tag-group">
+                    <div class="tag-title">Politics</div>
+                    <hr>
+                    <div class="tag-container">
+                        <button class="button is-rounded is-small">Rounded</button>
+                        <button class="button is-rounded is-small">Russia</button>
+                        <button class="button is-rounded is-small">UK</button>
+                        <button class="button is-rounded is-small">US</button>
+                        <button class="button is-rounded is-small">China</button>
+                        <button class="button is-rounded is-small">Sweden</button>
+                        <button class="button is-rounded is-small">France</button>
+                    </div>
+                </div>
+
+                <div class="one-tag-group">
+                    <div class="tag-title">Form of Humor <button class="button is-rounded is-small is-link">Rounded &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button></div>
+                    <hr>
+                    <div class="tag-container">
+                        <button class="button is-rounded is-small">Rounded</button>
+                        <button class="button is-rounded is-small">Russia</button>
+                        <button class="button is-rounded is-small">UK</button>
+                        <button class="button is-rounded is-small">US</button>
+                        <button class="button is-rounded is-small">China</button>
+                        <button class="button is-rounded is-small">Sweden</button>
+                        <button class="button is-rounded is-small">France</button>
+                    </div>
+                </div>
+
+                <div class="one-tag-group">
+                    <div class="tag-title">User Generated or Professional <button class="button is-rounded is-small is-link">Rounded &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button></div>
+                    <hr>
+                    <div class="tag-container">
+                        <button class="button is-rounded is-small">Rounded</button>
+                        <button class="button is-rounded is-small">Russia</button>
+                        <button class="button is-rounded is-small">UK</button>
+                        <button class="button is-rounded is-small">US</button>
+                        <button class="button is-rounded is-small">China</button>
+                        <button class="button is-rounded is-small">Sweden</button>
+                        <button class="button is-rounded is-small">France</button>
+                    </div>
+                </div>
+
+                <div class="other-tag-controls">
+                    <button class="button is-primary">SUBMIT</button>
+                </div>
+            </article>
+            
+        </div>
+        <div class="column">
+            <div class="card is-primary" id="panel-container" >
+                <div class="card-content">
+                    Filter
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
