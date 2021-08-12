@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 
 <body>
@@ -72,98 +73,63 @@
                 </p>
                 
                 <div class="one-tag-group">
-                    <div class="tag-title">
-                        Country
-                    </div>
+
+                    <div class="tag-title">Country <span id="inputCOUNTRY"></span></div>
+
                     <hr>
-                    <div class="tag-container">
-                        <button class="button is-rounded is-small">Rounded</button>
-                        <button class="button is-rounded is-small">Russia</button>
-                        <button class="button is-rounded is-small">UK</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
+
+                    <div class="tag-container" id="country_tags">
+                        
                     </div>
+
                 </div>
 
                 <div class="one-tag-group">
-                    <div class="tag-title">Language <button class="button is-rounded is-small is-success">Rounded &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button></div>
+
+                    <div class="tag-title">Language <span id="inputLANGUAGE"></span></div>
 
                     <hr>
-                    <div class="tag-container">
-                        <button class="button is-rounded is-small">Rounded</button>
-                        <button class="button is-rounded is-small">Russia</button>
-                        <button class="button is-rounded is-small">UK</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
-                        <button class="button is-rounded is-small">Rounded</button>
-                        <button class="button is-rounded is-small">Russia</button>
-                        <button class="button is-rounded is-small">UK</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
-                        <button class="button is-rounded is-small">Rounded</button>
-                        <button class="button is-rounded is-small">Russia</button>
-                        <button class="button is-rounded is-small">UK</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
+
+                    <div class="tag-container" id="language_tags">
+
                     </div>
+
                 </div>
 
                 <div class="one-tag-group">
-                    <div class="tag-title">Politics</div>
+
+                    <div class="tag-title">Politics <span id="inputPOLITICS"></span></div>
+
                     <hr>
-                    <div class="tag-container">
-                        <button class="button is-rounded is-small">Rounded</button>
-                        <button class="button is-rounded is-small">Russia</button>
-                        <button class="button is-rounded is-small">UK</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
+
+                    <div class="tag-container" id="politics_tags">
+                        
                     </div>
+
                 </div>
 
                 <div class="one-tag-group">
-                    <div class="tag-title">Form of Humor <button class="button is-rounded is-small is-success">Rounded &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button></div>
+
+                    <div class="tag-title">Form of Humor <span id="inputFORM"></span></div>
+
                     <hr>
-                    <div class="tag-container">
-                        <button class="button is-rounded is-small">Rounded</button>
-                        <button class="button is-rounded is-small">Russia</button>
-                        <button class="button is-rounded is-small">UK</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
+
+                    <div class="tag-container" id="form_tags">
+                        
                     </div>
+
                 </div>
 
                 <div class="one-tag-group">
-                    <div class="tag-title">User Generated or Professional <button class="button is-rounded is-small is-success">Rounded &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button></div>
+
+                    <div class="tag-title">User Generated or Professional <span id="inputUSERGEN"></span></div>
+
                     <hr>
-                    <div class="tag-container">
-                        <button class="button is-rounded is-small">Rounded</button>
-                        <button class="button is-rounded is-small">Russia</button>
-                        <button class="button is-rounded is-small">UK</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">US</button>
-                        <button class="button is-rounded is-small">China</button>
-                        <button class="button is-rounded is-small">Sweden</button>
-                        <button class="button is-rounded is-small">France</button>
-                        <button class="button is-rounded is-small">France</button>
+
+                    <div class="tag-container" id="usergen_tags">
+
                     </div>
+
                 </div>
 
                 
@@ -182,42 +148,123 @@
             
         </div>
         <div class="column">
-            <div class="card is-primary" id="search_results" >
+            <div class="card" id="search_results" >
                 <p class="panel-heading">
                     </i> Search Results
                 </p>
 
-                <div id="pagination-container" style="display: block; width: 100%; padding: 10px;">
-                    <nav class="pagination is-rounded is-small" role="navigation" aria-label="pagination">
-                        <ul class="pagination-list">
-                          <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                          <li><span class="pagination-ellipsis">&hellip;</span></li>
-                          <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
-                          <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
-                          <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
-                          <li><span class="pagination-ellipsis">&hellip;</span></li>
-                          <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
-                        </ul>
-                    </nav>
+                <div id="pagination-container">
+
                 </div>
-                <div style="max-height: calc(100vh - 172px); overflow-y: auto; margin:10px; margin-top: 0;padding-right: 10px;">
+
+                <div class="not-found">
+                    <span style='font-size:500%; text-align: center; width: 100%; display:block;'><i class="fa fa-frown-o" aria-hidden="true"></i> <i class="fa fa-frown-o" aria-hidden="true"></i></span><h1 style='text-align: center; width: 100%; font-size: 200%;'>Oops! For the current tag combination, no jokes are available... Please check that only desired features are selected</h1>
+                </div>
+
+                <div class="main-loading-animation">
+                    Loading... <i class="fa fa-spinner fa-spin fa-fw"></i>
+                </div>
+
+                <div class="masonry-container">
                     <div id="masonry">
-                        
+                        <!-- <button onclick="show_anno_window(123,123,123)">show modal</button> -->
                     </div>
-                
-                
                 </div>
-
-
 
             </div>
-
-            
-
-            
             
         </div>
     </div>
+
+
+
+    <div id="workplace" class="ext-modal">
+        <div class="modal-left">
+            <img src="https://i.pcmag.com/imagery/articles/007cgCeF2SOUL9OBpHBmdPi-21..1570636121.jpg" alt="">
+        </div>
+        <div class="modal-right">
+            <div class="modal-close-area">
+                <button class="button is-white is-large" onclick="closeModal()"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <div class="annotation-area">
+
+                <div class="annotation-block">
+                    <label class="anno_label">Language</label>
+                    <div class="select">
+                        <select id="annotation_language">
+                          <option value="">Argentina</option>
+                          <option value="">Bolivia</option>
+                        </select>
+                      </div>
+                </div>
+
+
+                <div class="annotation-block">
+                    <label class="anno_label">Politics</label>
+                    <div class="select">
+                        <select id="annotation_politics">
+                          <option value="">Argentina</option>
+                          <option value="">Bolivia</option>
+                        </select>
+                      </div>
+                </div>
+
+                <div class="annotation-block">
+                    <label class="anno_label">Form of Humor</label>
+                    <div class="select">
+                        <select id="annotation_form">
+                          <option value="">Argentina</option>
+                          <option value="">Bolivia</option>
+                        </select>
+                      </div>
+                </div>
+
+                <div class="annotation-block">
+                    <label class="anno_label">User Generated or Professional</label>
+                    <div class="select">
+                        <select id="annotation_usergen">
+                          <option value="1">Argentina</option>
+                          <option value="">Bolivia</option>
+                        </select>
+                      </div>
+                </div>
+
+                <div id="anno_error_msg">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp; You haven't made any changes...
+                </div>
+
+                <div class="annotation-review">
+                    <label class="anno_label">Language</label>
+                    <button id="review_language" class="button is-rounded"></button>
+
+                    <label class="anno_label">Politics</label>
+                    <button id="review_politics" class="button is-rounded"></button>
+
+                    <label class="anno_label">Form of Humor</label>
+                    <button id="review_form" class="button is-rounded"></button>
+                    
+                    <label class="anno_label">User Generated or Professional</label>
+                    <button id="review_usergen" class="button is-rounded"></button>
+                </div>
+
+            </div>
+
+            <div class="modal-controls">
+                <!--- first group  --->
+                <button class="button is-info is-large first-group-control" onclick="go_to_review()">NEXT &nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+
+                <!--- second group  --->
+
+                <button class="button is-warning is-large second-group-control" onclick="return_to_workplace()" id="go_back_button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> &nbsp; BACK</button>
+
+                <button class="button is-success is-large second-group-control" id="submit_anno_button">SUBMIT &nbsp;<i class="fa fa-check-circle" aria-hidden="true"></i></button>
+            </div>
+
+        </div>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="update_annotation.js"></script>
 
 </html>

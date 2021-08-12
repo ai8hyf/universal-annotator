@@ -1,0 +1,107 @@
+#workplace{
+    display: none;
+}
+
+.ext-modal {
+    position: absolute; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: calc(100vw); /* Full width */
+    height: calc(100vh); /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 20px;
+}
+
+.ext-modal>div{
+    max-height: calc(100vw - 40px);
+    overflow-y: auto;
+}
+
+.modal-close-area{
+    display: block;
+    width: 100%;
+    text-align: right;
+    background-color: white;
+}
+
+
+.annotation-area{
+    display: block;
+    width: 100%;
+    height: calc(100vh - 200px); 
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto;
+    /* background: rgb(83, 83, 83); */
+}
+
+.modal-controls{
+    display: block;
+    height: 100px;
+    padding: 20px;
+    width: 100%;
+    text-align: right;
+    background-color: white;
+}
+
+
+.modal-left{
+    width: calc(67%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.modal-left>img{
+    max-height: calc(100vh - 60px);
+    max-width: 95%;
+    height: auto;
+    width: auto;
+
+}
+
+.modal-right{
+    width: calc(33%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#anno_error_msg{
+    color: red;
+    font-weight: bold;
+    margin-left: 1px;
+}
+
+.annotation-block{
+    
+}
+
+label.anno_label{
+    margin-left: 1px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.annotation-block>.select{
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.annotation-block>.select>select{
+    width: 100%;
+}
+
+.annotation-review{
+    display: none;
+}
+
+.annotation-review>button{
+    margin-bottom: 20px;
+}
