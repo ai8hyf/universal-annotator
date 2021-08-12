@@ -56,7 +56,7 @@
     background-color: #f8f9fa;
 }
 
-.modal-left>img{
+.modal-left>a>img{
     max-height: calc(100vh - 60px);
     max-width: 95%;
     height: auto;

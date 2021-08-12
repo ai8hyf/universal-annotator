@@ -1,7 +1,11 @@
 let cur_joke = null
 let api_response
-let item_per_page = 30
+let item_per_page = 25
 let image_cache = {}
+
+// start-up preps
+////////////////////////////
+$(".tag-container").html('Loading... <i class="fa fa-spinner fa-spin fa-fw"></i>')
 
 async function update_anno_api_response(){
     temp = await $.ajax({
@@ -10,217 +14,8 @@ async function update_anno_api_response(){
     });
     api_response = JSON.parse(temp)
 }
-// update_anno_api_response()
-
-api_response = {
-    "FORMS": [
-        "Moving image without sound",
-        "Sound only",
-        "Photograph or manipulated photograph with text",
-        "Drawing with language",
-        "Drawing without language",
-        "Photograph or manipulated photograph without text",
-        "Written language only",
-        "Moving image with sound",
-        "Unclear"
-    ],
-    "POLITICAL": [
-        "Politics",
-        "No Politics",
-        "Unclear"
-    ],
-    "USERGENERATED": [
-        "Professional",
-        "User Generated",
-        "Unclear"
-    ],
-    "LANGUAGE": [
-        "Abkhazian",
-        "Afar",
-        "Afrikaans",
-        "Akan",
-        "Albanian",
-        "Amharic",
-        "Arabic",
-        "Aragonese",
-        "Armenian",
-        "Assamese",
-        "Avaric",
-        "Avestan",
-        "Aymara",
-        "Azerbaijani",
-        "Bambara",
-        "Bashkir",
-        "Basque",
-        "Belarusian",
-        "Bengali",
-        "Bihari languages",
-        "Bislama",
-        "Bosnian",
-        "Breton",
-        "Bulgarian",
-        "Burmese",
-        "Catalan, Valencian",
-        "Chamorro",
-        "Chechen",
-        "Chichewa, Chewa, Nyanja",
-        "Chinese",
-        "Chuvash",
-        "Cornish",
-        "Corsican",
-        "Cree",
-        "Croatian",
-        "Czech",
-        "Danish",
-        "Divehi, Dhivehi, Maldivian",
-        "Dutch, Flemish",
-        "Dzongkha",
-        "English",
-        "Esperanto",
-        "Estonian",
-        "Ewe",
-        "Faroese",
-        "Fijian",
-        "Finnish",
-        "French",
-        "Fulah",
-        "Galician",
-        "Georgian",
-        "German",
-        "Greek, Modern [1453 ? ]",
-        "Guarani",
-        "Gujarati",
-        "Haitian, Haitian Creole",
-        "Hausa",
-        "Hebrew",
-        "Herero",
-        "Hindi",
-        "Hiri Motu",
-        "Hungarian",
-        "Interlingua",
-        "Indonesian",
-        "Interlingue, Occidental",
-        "Irish",
-        "Igbo",
-        "Inupiaq",
-        "Ido",
-        "Icelandic",
-        "Italian",
-        "Inuktitut",
-        "Japanese",
-        "Javanese",
-        "Kalaallisut, Greenlandic",
-        "Kannada",
-        "Kanuri",
-        "Kashmiri",
-        "Kazakh",
-        "Central Khmer",
-        "Kikuyu, Gikuyu",
-        "Kinyarwanda",
-        "Kirghiz, Kyrgyz",
-        "Komi",
-        "Kongo",
-        "Korean",
-        "Kurdish",
-        "Kuanyama, Kwanyama",
-        "Latin",
-        "Luxembourgish, Letzeburgesch",
-        "Ganda",
-        "Limburgan, Limburger, Limburgish",
-        "Lingala",
-        "Lao",
-        "Lithuanian",
-        "Luba-Katanga",
-        "Latvian",
-        "Manx",
-        "Macedonian",
-        "Malagasy",
-        "Malay",
-        "Malayalam",
-        "Maltese",
-        "Maori",
-        "Marathi",
-        "Marshallese",
-        "Mongolian",
-        "Nauru",
-        "Navajo, Navaho",
-        "North Ndebele",
-        "Nepali",
-        "Ndonga",
-        "Norwegian Bokmal",
-        "Norwegian Nynorsk",
-        "Norwegian",
-        "Sichuan Yi, Nuosu",
-        "South Ndebele",
-        "Occitan",
-        "Ojibwa",
-        "Church Slavic, Old Slavonic, Church Slavonic, Old Bulgarian, Old Church Slavonic",
-        "Oromo",
-        "Oriya",
-        "Ossetian, Ossetic",
-        "Punjabi, Panjabi",
-        "Pali",
-        "Persian",
-        "Polish",
-        "Pashto, Pushto",
-        "Portuguese",
-        "Quechua",
-        "Romansh",
-        "Rundi",
-        "Romanian, Moldavian, Moldovan",
-        "Russian",
-        "Sanskrit",
-        "Sardinian",
-        "Sindhi",
-        "Northern Sami",
-        "Samoan",
-        "Sango",
-        "Serbian",
-        "Gaelic, Scottish Gaelic",
-        "Shona",
-        "Sinhala, Sinhalese",
-        "Slovak",
-        "Slovenian",
-        "Somali",
-        "Southern Sotho",
-        "Spanish, Castilian",
-        "Sundanese",
-        "Swahili",
-        "Swati",
-        "Swedish",
-        "Tamil",
-        "Telugu",
-        "Tajik",
-        "Thai",
-        "Tigrinya",
-        "Tibetan",
-        "Turkmen",
-        "Tagalog",
-        "Tswana",
-        "Tonga (Tonga Islands)",
-        "Turkish",
-        "Tsonga",
-        "Tatar",
-        "Twi",
-        "Tahitian",
-        "Uighur, Uyghur",
-        "Ukrainian",
-        "Urdu",
-        "Uzbek",
-        "Venda",
-        "Vietnamese",
-        "Volapuk",
-        "Walloon",
-        "Welsh",
-        "Wolof",
-        "Western Frisian",
-        "Xhosa",
-        "Yiddish",
-        "Yoruba",
-        "Zhuang, Chuang",
-        "Zulu"
-    ]
-}
+update_anno_api_response()
+////////////////////////////
 
 function openBase64InNewTab (data, mimeType) {
     var byteCharacters = atob(image_cache[data]);
@@ -245,16 +40,15 @@ function show_anno_window(joke_id, img_url, img_type){
     $(".first-group-control").show()
     $(".second-group-control").hide()
     
-
     cur_joke = joke_id
 
-    // src='data:image/"+img_type+";base64,"+img_content+"'
+    src='data:image/"+img_type+";base64,"+img_content+"'
 
     $(".annotation-block>div>select").html('')
     $(".annotation-block>div>select").append('<option value="" selected> -- </option>')
 
-    // $(".annotation_joke_content").html('')
-    // $(".annotation_joke_content").append('<a onclick="openBase64InNewTab(\''+img_url+'\', \'image/'+img_type+'\')" target="_blank"><img style="min-height:30px; max-height:450px;" src="data:image/'+img_type+';base64,'+image_cache[img_url]+'"  alt="'+img_url+'"></a>')
+    $(".modal-left").html('')
+    $(".modal-left").append('<a onclick="openBase64InNewTab(\''+img_url+'\', \'image/'+img_type+'\')" target="_blank"><img style="min-height:30px; max-height:450px;" src="data:image/'+img_type+';base64,'+image_cache[img_url]+'"  alt="'+img_url+'"></a>')
     
     api_response['FORMS'].forEach(function(item){
         $("#annotation_form").append('<option value="'+item+'">'+item+'</option>')
@@ -458,8 +252,6 @@ function smartPagination(total_item, each_page, max_button, container_id, cur_pa
     // $(new_container_id).append('<li class="pagination-link"><span class="page-link no-border">Total: '+total_item.toString()+'</span></li>')
 }
 
-// smartPagination(88, 20, 8, "#pagination-container", 3)
-
 function request_jokes(page_num){
 
     $(".not-found").hide()
@@ -558,11 +350,11 @@ async function get_tags(tag_type){
     }
 }
 
-// get_tags("COUNTRY")
-// get_tags("LANGUAGE")
-// get_tags("POLITICS")
-// get_tags("FORM")
-// get_tags("USERGEN")
+get_tags("COUNTRY")
+get_tags("LANGUAGE")
+get_tags("POLITICS")
+get_tags("FORM")
+get_tags("USERGEN")
 
 function setTag(tag_type, tag){
     tag = tag.split(' (')[0],trim()
