@@ -357,9 +357,8 @@ get_tags("FORM")
 get_tags("USERGEN")
 
 function setTag(tag_type, tag){
-    tag = tag.split(' (')[0],trim()
-
-    $("#input"+tag_type).html('<button onclick="clear_tag(\''+tag_type+'\') class="button is-rounded is-small is-success">'+tag+' &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button>')
+    tag = tag.split(' (')[0].trim()
+    $("#input"+tag_type).html('<button onclick="clear_tag(\''+tag_type+'\')" class="button is-rounded is-small is-success">'+tag+' &nbsp;<i class="fa fa-close" aria-hidden="true"></i></button>')
 }
 
 function clear_tag(tag_type){
